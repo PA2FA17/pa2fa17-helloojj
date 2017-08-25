@@ -1,6 +1,6 @@
 /*
  * Name        : lab_2.cpp
- * Author      : FILL IN
+ * Author      : Justin Johnson
  * Description : Using Arithmetic to finish the functions MakeChange() and
  *               LaunchHumanCannonball()
  */
@@ -31,7 +31,7 @@ void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels,
 double LaunchHumanCannonball(double initial_velocity, double launch_angle);
 
 // Create a Constant named kPI which is initialized to 3.1415927
-// FILL IN
+  const double kPI = 3.1415927;
 
 // Program Execution Starts Here
 int main() {
@@ -56,7 +56,10 @@ int main() {
  */
 void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels,
                 int &pennies) {
-  // CODE HERE
+  quarters = (initial_value / 25);
+  dimes = (initial_value % 25) / 10;
+  nickels = ( (initial_value % 25) % 10) / 5;
+  pennies = (((initial_value % 25) % 10) %5);
 }
 
 /*
@@ -73,7 +76,7 @@ void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels,
 double LaunchHumanCannonball(double initial_velocity, double launch_angle) {
   // (1) Convert launch_angle from degrees to radians
   //     [radian_angle = degree_launch_angle * (kPI/180)]
-  // CODE HERE
+ 
 
   // (2) Compute final horizontal/x velocity
   //     [x_velocity = initial_velocity * cos(radian_angle)]
