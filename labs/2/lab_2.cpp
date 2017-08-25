@@ -76,23 +76,28 @@ void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels,
 double LaunchHumanCannonball(double initial_velocity, double launch_angle) {
   // (1) Convert launch_angle from degrees to radians
   //     [radian_angle = degree_launch_angle * (kPI/180)]
- 
-
+  double radian_angle = 0.0, degree_launch_angle = 0.0;
+  radian_angle = degree_launch_angle * (kPI/180);
+  
   // (2) Compute final horizontal/x velocity
   //     [x_velocity = initial_velocity * cos(radian_angle)]
-  // CODE HERE
+  double x_velocity = 0.0;
+  x_velocity = initial_velocity * cos(radian_angle);
 
   // (3) Compute final vertical/y velocity
   //     [y_velocity = initial_velocity * sin(radian_angle) * -1]
-  // CODE HERE
+  double y_velocity = 0.0;
+  y_velocity = initial_velocity * sin(radian_angle) * -1;
 
   // (4) Compute time of flight 
   //     [flight_time = (y_velocity) * 2 / -9.8]
-  // CODE HERE
-
+  double flight_time = 0.0;
+  flight_time = (y_velocity) * 2 / -9.8;
+  
   // (5) Compute horizontal/x distance travelled
   //     [x_distance = x_velocity * flight_time]
-  // CODE HERE
+  double x_distance = 0.0;
+  x_distance = x_velocity * flight_time;
 
 }
 
