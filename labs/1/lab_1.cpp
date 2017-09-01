@@ -25,13 +25,13 @@ std::vector<int> failed_tests;
 int main() {
   // (1) Declare a string variable named user_name
   string user_name = "";
-  
+
   // (2) Declare a character variable named programmed_before and another named
   //     my_character. Initialize both of them to the value 'z'
   char programmed_before = 'z', my_character = 'z';
 
   // (3) Display a welcome message to standard output
-  cout << " Hi welcome \n" ;
+  cout << " Hi welcome \n";
 
   // (4) Prompt the user for their first name
   cout << "Please enter your first name \n";
@@ -51,7 +51,7 @@ int main() {
   //      programmed_before
   cin >> programmed_before;
 
-  
+
   // For testing (DO NOT ALTER)
   UnitTest(user_name, programmed_before, my_character);
 

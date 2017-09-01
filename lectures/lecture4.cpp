@@ -25,7 +25,7 @@ int main() {
        }
        ss >> extracted_age;
        cout << extracted_age << endl;
-    
+
     
     return 0;
 }
