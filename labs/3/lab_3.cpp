@@ -1,6 +1,6 @@
 /*
  * Name        : lab_3.cpp
- * Author      : FILL IN
+ * Author      : Justin Johnson
  * Description : Using branching statements, looping statements and string and
  *               character functions complete the functions
  */
@@ -65,6 +65,50 @@ int main() {
  */
 string Goldilocks(string item, int number) {
   // CODE HERE
+  
+  if(item == "porridge") {
+    switch(number) {
+      case 1:
+        item = "This porridge is too hot";
+        break;
+      case 2: 
+        item = "This porridge is too cold";
+        break;
+      case 3:
+        item  = "This porridge is just right";
+        break;
+    }
+  } // close if
+  
+  else if(item == "chair") {
+    switch(number) {
+      case 1:
+        item = "This chair is too big";
+        break;
+      case 2: 
+        item = "This chair is too small";
+        break;
+      case 3:
+        item  = "This chair is just right";
+        break;
+      } // close switch
+    } // close else if 
+    
+    else if(item == "bed") {
+      switch(number){
+      case 1:
+        item = "This bed is too hard";
+        break;
+      case 2:
+      item = "This bed is too soft";
+      break;
+      case 3:
+      item = "This bed is just right";
+      break;
+      }
+    } // close else if
+    
+  return item;
 }
 
 /*
@@ -82,6 +126,44 @@ string Goldilocks(string item, int number) {
 int RockScissorPaper(char player_one, char player_two) {
   // YOU MUST USE A SWITCH IN THIS FUNCTION
   // CODE HERE
+  int num = 0;
+  // if( (tolower(player_one) == 'r' && tolower(player_two) == 's') ||
+  // (tolower(player_one) == 's' && tolower(player_two) == 'p') ||
+  // (tolower(player_one) == 'p' && tolower(player_two) == 'r') ){
+  //   num == 1;
+  //   }
+  // else if ( (tolower(player_one) == 's' && tolower(player_two) == 'r') ||
+  // (tolower(player_one) == 'p' && tolower(player_two) == 's') ||
+  // (tolower(player_one) == 'r' && tolower(player_two) == 'p') ) {
+  //   num = 2;
+  // }
+  // else if(player_one == player_two) {
+  //   num = 3;
+  // }
+ 
+  switch(tolower(player_one)) {
+    case 'r':
+    case 's':
+    case 'p':
+      if((tolower(player_two) == 's' && tolower(player_one) == 'r') || 
+      (tolower(player_two) == 'p' && tolower(player_one) == 's') ||
+      (tolower(player_two) == 's' && tolower(player_one) == 'r') ||
+      tolower(player_two) == 'p' && tolower(player_one) == 'r')) { 
+      num = 1;
+      }
+      else if((tolower(player_two) == 'r' && tolower(player_one) == 's') || 
+      (tolower(player_two) == 's' && tolower(player_one) == 'p') ||
+      (tolower(player_two) == 'r' && tolower(player_one) == 's') ||
+      tolower(player_two) == 'p' && tolower(player_one) == 'r') {
+        num = 2;
+      }
+      else {
+        num = 3;
+      }
+      break;
+  }
+  
+  return num;
 }
 
 /*
