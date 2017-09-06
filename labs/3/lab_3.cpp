@@ -65,37 +65,33 @@ int main() {
  */
 string Goldilocks(string item, int number) {
   // CODE HERE
-  
-  if(item == "porridge") {
-    switch(number) {
+
+  if (item == "porridge") {
+    switch ( number ) {
       case 1:
         item = "This porridge is too hot";
         break;
-      case 2: 
+      case 2:
         item = "This porridge is too cold";
         break;
       case 3:
         item  = "This porridge is just right";
         break;
     }
-  } // close if
-  
-  else if(item == "chair") {
-    switch(number) {
+  } else if ( item == "chair" ) {
+    switch (number) {
       case 1:
         item = "This chair is too big";
         break;
-      case 2: 
+      case 2:
         item = "This chair is too small";
         break;
       case 3:
         item  = "This chair is just right";
         break;
-      } // close switch
-    } // close else if 
-    
-    else if(item == "bed") {
-      switch(number){
+      }  // close switch
+    } else if (item == "bed") {
+      switch (number) {
       case 1:
         item = "This bed is too hard";
         break;
@@ -106,8 +102,8 @@ string Goldilocks(string item, int number) {
       item = "This bed is just right";
       break;
       }
-    } // close else if
-    
+    }   // close else if
+
   return item;
 }
 
@@ -140,29 +136,26 @@ int RockScissorPaper(char player_one, char player_two) {
   // else if(player_one == player_two) {
   //   num = 3;
   // }
- 
-  switch(tolower(player_one)) {
+
+  switch (tolower(player_one)) {
     case 'r':
     case 's':
     case 'p':
-      if((tolower(player_two) == 's' && tolower(player_one) == 'r') || 
+      if ( (tolower(player_two) == 's' && tolower(player_one) == 'r') ||
       (tolower(player_two) == 'p' && tolower(player_one) == 's') ||
-      (tolower(player_two) == 's' && tolower(player_one) == 'r') ||
-      tolower(player_two) == 'p' && tolower(player_one) == 'r')) { 
+      (tolower(player_two) == 's' && tolower(player_one) == 'r')  ) {
       num = 1;
-      }
-      else if((tolower(player_two) == 'r' && tolower(player_one) == 's') || 
+      } else if ( (tolower(player_two) == 'r' && tolower(player_one) == 's') ||
       (tolower(player_two) == 's' && tolower(player_one) == 'p') ||
       (tolower(player_two) == 'r' && tolower(player_one) == 's') ||
-      tolower(player_two) == 'p' && tolower(player_one) == 'r') {
+      (tolower(player_two) == 'p' && tolower(player_one) == 'r') ) {
         num = 2;
-      }
-      else {
+      } else {
         num = 3;
       }
       break;
   }
-  
+
   return num;
 }
 
