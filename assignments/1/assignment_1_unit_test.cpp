@@ -8,6 +8,7 @@
 #include <string>
 #include <climits>
 #include "assignment_1.h"
+#include "assignment_1.cpp"
 using std::cout;
 using std::endl;
 using std::string;
@@ -36,6 +37,7 @@ int main() {
 }
 
 // Function Definitions
+
 void UnitTest() {
   cout << string(40, '-') << endl;
   cout << "UNIT TEST:\n" << string(40, '-') << endl;

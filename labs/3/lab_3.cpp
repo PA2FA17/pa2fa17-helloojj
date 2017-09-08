@@ -123,6 +123,7 @@ int RockScissorPaper(char player_one, char player_two) {
   // YOU MUST USE A SWITCH IN THIS FUNCTION
   // CODE HERE
   int num = 0;
+  
   // if( (tolower(player_one) == 'r' && tolower(player_two) == 's') ||
   // (tolower(player_one) == 's' && tolower(player_two) == 'p') ||
   // (tolower(player_one) == 'p' && tolower(player_two) == 'r') ){
@@ -137,6 +138,8 @@ int RockScissorPaper(char player_one, char player_two) {
   //   num = 3;
   // }
 
+  // switch case to determine who won the round or if it is a draw
+  // using to make sure the input will work correctly with test
   switch (tolower(player_one)) {
     case 'r':
     case 's':
@@ -155,7 +158,7 @@ int RockScissorPaper(char player_one, char player_two) {
       }
       break;
   }
-
+  // returns a number to see who won
   return num;
 }
 

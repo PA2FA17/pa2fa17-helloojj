@@ -66,6 +66,8 @@ int main() {
  */
 string MakeString(string label, double value, char separator) {
   // CODE HERE
+  
+  return label;
 }
 
 /*
