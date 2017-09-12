@@ -1,7 +1,7 @@
 /*
  * Name        : Justin Johnson
  * Author      : Justin Johnson
- * Description : FILL IN
+ * Description : Create functions for the fist assignemtn of csci21
  * Sources     : FILL IN
  */
 
@@ -42,7 +42,7 @@ int CountWords(string word) {
   // if (isalpha(word.at(0)) ){
   //     count++;
   //   }
-  for (int i = 0; i < word.length(); i++) {
+  for (unsigned int i = 0; i < word.length(); i++) {
     if (word.at(i) == ' ' || word.at(i) == ',') {
       count++;
     }
