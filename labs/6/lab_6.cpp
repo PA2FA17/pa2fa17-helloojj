@@ -87,6 +87,24 @@ int main() {
 }
 
 // CODE HERE (FUNCTION DEFINITIONS)
+string PrepareForDisplay(int values[], int size, char separator) {
+  string array;
+  stringstream ss;
+   cout << values[size];
+   return array;
+}
+bool HasValue(int values[], int size, int value) {
+  
+}
+int ValueAt(int values[], int size, int index, bool& error) {
+   
+ }
+int Sum(int values[], int size){
+   
+ }
+bool SwapValues(int values[], int size, int index1, int index2) {
+   
+ }
 
 
 // For testing (DO NOT ALTER)
