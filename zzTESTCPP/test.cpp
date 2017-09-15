@@ -13,10 +13,12 @@ using std::stringstream;
 //void CountCharacters(word, &letter_count ,&number_count);
 
 int main(){
-string word;
- int letter_count = 0, number_count =0;
+ string word;
+//  int letter_count = 0, number_count =0;
 
  getline(cin,word); 
+ word = toupper(word);
+ cout << word;
 
 
   // for (int i = 0; i < word.length(); i++) {
@@ -52,19 +54,19 @@ string word;
   // }
   // cout << word;
   
-  int count = 0;
+  // int count = 0;
   
-  if (isalpha(word.at(0))){
-      count++;
-    }
+  // if (isalpha(word.at(0))){
+  //     count++;
+  //   }
   
-  for (int i = 0; i < word.length(); i++){
+  // for (int i = 0; i < word.length(); i++){
     
-    if(word.at(i) == ' '){
-     count++;
-    }
-  }
-  cout << count;
+  //   if(word.at(i) == ' '){
+  //    count++;
+  //   }
+  // }
+  // cout << count;
 
   // int array_Size = 1000;
   // int array[array_Size];

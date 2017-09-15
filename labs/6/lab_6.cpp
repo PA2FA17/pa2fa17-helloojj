@@ -1,6 +1,6 @@
 /*
  * Name        : lab_6.cpp
- * Author      : FILL IN
+ * Author      : Justin Johnson
  * Description : Working with Arrays
  */
 
