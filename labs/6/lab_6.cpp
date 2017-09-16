@@ -88,22 +88,63 @@ int main() {
 
 // CODE HERE (FUNCTION DEFINITIONS)
 string PrepareForDisplay(int values[], int size, char separator) {
-  string array;
+  string s, t[size];
   stringstream ss;
-   cout << values[size];
-   return array;
+
+  for (int i = 0; i < size ; i++) {
+    ss << values[i] << separator;
+  }
+  s = ss.str();
+  // to delte the last char of my strings as ther wwhere the seprator
+  s.pop_back();
+  return s;
 }
 bool HasValue(int values[], int size, int value) {
+  bool var = false;
   
+  for (int i =0; i < size; i++) {
+    values[i];
+    if (value == values[i]){
+      var = true;
+    }
+  }
+  return var;
 }
 int ValueAt(int values[], int size, int index, bool& error) {
    
+  // for (int i =0; i < size; i++) {
+  //   values[i];
+  //   if (index == values[i]){
+  //     index = values[i];
+  //   }
+  // }
+   return index;
  }
 int Sum(int values[], int size){
+   int sum = 0;
    
+   for (int i = 0; i < size; i++){
+     sum = sum + values[i];
+   }
+   return sum;
  }
 bool SwapValues(int values[], int size, int index1, int index2) {
-   
+  bool success = false;
+  int temp = 0;
+
+  for (int i = 0; i < size; i++){
+    temp = values[index1];
+    values[index1] = values[index2];
+    values[index2] = temp;
+  }
+  std::swap(index1,index2);
+  //cout << index1 << " " << static_cast<int>(temp);
+  
+  if(index2 == index2){
+    success = true;
+ }
+
+  return success;
  }
 
 
