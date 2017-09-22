@@ -60,16 +60,16 @@ int main(int argc, char* argv[]) {
 
 // CODE HERE -- FUNCTION DEFINITION
 void ProcessArguments(int argc, char *argv[]) {
-  for (int i = 1; i < argc; i++) { 
+  for (int i = 1; i < argc; i++) {
     if (strcmp(argv[i], "10") == 0) {
       OnTen();
-    } else if (strcmp(argv[i], "20") == 0){
+    } else if (strcmp(argv[i], "20") == 0) {
       OnTwenty();
     } else if (strcmp(argv[i], "30") == 0) {
       OnThirty();
-    } else if (strcmp(argv[i], "40") == 0){
+    } else if (strcmp(argv[i], "40") == 0) {
       OnForty();
-    } else if (strcmp(argv[i], "50") == 0){
+    } else if (strcmp(argv[i], "50") == 0) {
       OnFifty();
     } else {
       OnError();
