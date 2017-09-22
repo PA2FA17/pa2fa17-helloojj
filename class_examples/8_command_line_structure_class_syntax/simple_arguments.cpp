@@ -17,9 +17,9 @@ int main(int argc, char *argv[]) {
     cout << "There are " << argc << " arguments:" << endl;
 
   // Loop through each argument and print its number and value
-  for (int i = 0; i < argc; i++)
+  for (int i = 0; i < argc; i++) {
     cout << i << " " << argv[i] << endl;
-
+}
   // This ends our program
   return 0;
 }

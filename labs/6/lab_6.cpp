@@ -88,14 +88,14 @@ int main() {
 
 // CODE HERE (FUNCTION DEFINITIONS)
 string PrepareForDisplay(int values[], int size, char separator) {
-  string s, t[size];
+  string s;
   stringstream ss;
 
   for (int i = 0; i < size ; i++) {
     ss << values[i] << separator;
   }
   s = ss.str();
-  // to delte the last char of my strings as ther wwhere the seprator
+  // to delte the last char of my strings as they where the seprator
   s.pop_back();
   return s;
 }

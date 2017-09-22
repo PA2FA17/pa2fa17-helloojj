@@ -7,6 +7,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <stdlib.h>
 using std::cout;
 using std::ifstream;
 using std::endl;
@@ -57,7 +58,40 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITION
+bool ProcessFile(string filename) {
+  bool success = false;
+  string number;
 
+  // open files
+  ifstream inFile;
+  inFile.open(filename);
+
+  // loop through files
+  while ( inFile.good() ) {
+    inFile >> number;
+      if (number == "10") {
+        OnTen();
+      } else if (number == "20") {
+        OnTwenty();
+      } else if (number == "30") {
+        OnThirty();
+      } else if (number == "40") {
+        OnForty();
+      } else if (number == "50") {
+        OnFifty();
+      } else {
+         OnError();
+      }
+  }
+  if(inFile.fail()) {
+    return false;
+  } else {
+    return true;
+  }
+
+  inFile.close();
+  return success;
+}
 // For testing (DO NOT ALTER)
 void UnitTest() {
   cout << string(40, '-') << endl;
