@@ -1,6 +1,10 @@
 /*
  * Name        : lab_6.cpp
+<<<<<<< HEAD
  * Author      : Justin Johnson
+=======
+ * Author      : FILL IN
+>>>>>>> 3f28ada4d0d1d2cfbbd86c5c28968146e230be18
  * Description : Working with Arrays
  */
 

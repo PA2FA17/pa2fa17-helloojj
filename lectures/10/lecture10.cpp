@@ -1,6 +1,6 @@
 #include <iostream>
 #include "day_of_year.h"
-#include "day_of_year.h"
+#include "day_of_year.cpp"
 using std::cout;
 using std::endl;
 
