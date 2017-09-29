@@ -5,7 +5,6 @@
  */
 #include <iostream>
 #include "temperature.h"
-
 using std::cout;
 using std::endl;
 
