@@ -120,7 +120,7 @@ string BuildMessage(const string &word = "", const bool &variable = false) {
 
 
   if (variable) {
-    for (int i = 0; i < word.size(); i++) {
+    for (unsigned int i = 0; i < word.size(); i++) {
       result[i] = toupper(word[i]);
     }
   }

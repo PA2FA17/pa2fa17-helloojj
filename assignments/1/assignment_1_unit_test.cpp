@@ -8,7 +8,6 @@
 #include <string>
 #include <climits>
 #include "assignment_1.h"
-#include "assignment_1.cpp"
 using std::cout;
 using std::endl;
 using std::string;

@@ -123,20 +123,6 @@ int RockScissorPaper(char player_one, char player_two) {
   // YOU MUST USE A SWITCH IN THIS FUNCTION
   // CODE HERE
   int num = 0;
-  
-  // if( (tolower(player_one) == 'r' && tolower(player_two) == 's') ||
-  // (tolower(player_one) == 's' && tolower(player_two) == 'p') ||
-  // (tolower(player_one) == 'p' && tolower(player_two) == 'r') ){
-  //   num == 1;
-  //   }
-  // else if ( (tolower(player_one) == 's' && tolower(player_two) == 'r') ||
-  // (tolower(player_one) == 'p' && tolower(player_two) == 's') ||
-  // (tolower(player_one) == 'r' && tolower(player_two) == 'p') ) {
-  //   num = 2;
-  // }
-  // else if(player_one == player_two) {
-  //   num = 3;
-  // }
 
   // switch case to determine who won the round or if it is a draw
   // using to make sure the input will work correctly with test
@@ -173,8 +159,12 @@ int RockScissorPaper(char player_one, char player_two) {
  */
 string CharWithAsciiValueAsString(char character) {
   // CODE HERE
+  string s;
+  stringstream ss;
 
   // HINT: try a stringstream here
+  
+  return s;
 }
 
 /*
@@ -184,6 +174,9 @@ string CharWithAsciiValueAsString(char character) {
  */
 string ToLower(string input) {
   // CODE HERE
+  string s;
+  
+  return s;
 }
 
 /*
@@ -193,6 +186,9 @@ string ToLower(string input) {
  */
 string ToUpper(string input) {
   // CODE HERE
+  string s;
+  
+  return s;
 }
 
 /*
@@ -206,6 +202,7 @@ string ToUpper(string input) {
  */
 char GetCharacter(string input, int char_index) {
   // CODE HERE
+
 }
 
 // For testing (DO NOT ALTER)

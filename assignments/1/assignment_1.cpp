@@ -13,7 +13,7 @@
 void CountCharacters(string word, int &letter_count, int &number_count) {
   letter_count = 0;
   number_count = 0;
-  for (int i = 0; i < word.length(); i++) {
+  for (unsigned int i = 0; i < word.length(); i++) {
       if (isalpha(word.at(i))) {
        letter_count++;
       } else if (isdigit(word.at(i))) {
@@ -24,26 +24,28 @@ void CountCharacters(string word, int &letter_count, int &number_count) {
 
 // function 2
 string UpAndDown(string word) {
-// getline(cin,word);
-
-  for (int i = 0; i < word.length(); i+=2) {
-    for (int j = 1; j < word.length(); j+=2) {
+  for (unsigned int i = 0; i < word.size(); i+=2) {
       word.at(i) = toupper(word.at(i));
-      word.at(j) = tolower(word.at(j));
-    }
   }
+    for (unsigned int i = 1; i < word.size(); i+=2) {
+      word.at(i) = tolower(word.at(i));
+    }
+
   return word;
 }
 
 // function3
 int CountWords(string word) {
-  int count = 0;
+  int count = 1;
 
   // if (isalpha(word.at(0)) ){
   //     count++;
   //   }
+  if (word == "") {
+    count = 0;
+  }
   for (unsigned int i = 0; i < word.length(); i++) {
-    if (word.at(i) == ' ' || word.at(i) == ',') {
+    if (word.at(i) == ' ') {
       count++;
     }
   }
@@ -53,11 +55,10 @@ int CountWords(string word) {
 
 // funtion4
 double ComputeMeanAverage(int array[], unsigned int array_Size) {
-  array[array_Size];
   double sum = 0;
   double Average = 0;
 
-  for (int i = 0; i < array_Size; i++) {
+  for (unsigned int i = 0; i < array_Size; i++) {
     sum = sum + array[i];
   }
   Average = sum / array_Size;

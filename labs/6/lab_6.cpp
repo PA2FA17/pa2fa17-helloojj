@@ -100,7 +100,7 @@ string PrepareForDisplay(int values[], int size, char separator) {
   }
   s = ss.str();
   // to delte the last char of my strings as they where the seprator
-  s.pop_back();
+  std::s.pop_back();
   return s;
 }
 bool HasValue(int values[], int size, int value) {

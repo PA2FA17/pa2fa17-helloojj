@@ -10,6 +10,7 @@
 
 // Add any includes and using statements Here
 #include <iostream>
+#include <cstring>
 #include <cmath>
 #include <string>
 #include <cctype>
@@ -24,7 +25,7 @@ using std::stringstream;
 void CountCharacters(string word, int &letter_count, int &number_count);
 string UpAndDown(string word);
 int CountWords(string word);
-double ComputeMeanAverage(int array[], unsigned int &array_Size);
+double ComputeMeanAverage(int array[], unsigned int array_Size);
 int FindMinValue(int array[], int size);
 int FindMaxValue(int array[], int size);
 #endif /* ASSIGNMENT_1_H */

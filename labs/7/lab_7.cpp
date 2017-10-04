@@ -64,7 +64,7 @@ bool ProcessFile(string filename) {
 
   // open files
   ifstream inFile;
-  inFile.open(filename);
+  inFile.open(filename.c_str());
 
   // loop through files
   while ( inFile.good() ) {
