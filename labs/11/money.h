@@ -115,4 +115,4 @@ class Money {
 };
 
 // REST OF HEADER GUARD GOES HERE
-#endif 
+#endif
