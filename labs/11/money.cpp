@@ -63,7 +63,7 @@ const Money operator -(const Money &amount) {
   return Money(final_dollars, final_cents);
 }
 ostream& operator <<(ostream &out, const Money &amount) {
- out << setfill('0') << setw(1);
- out << "$" << amount.dollars_ << "." << setw(2) << amount.cents_;
- return out;
+  out << setfill('0') << setw(1);
+  out << "$" << amount.dollars_ << "." << setw(2) << amount.cents_;
+  return out;
 }
