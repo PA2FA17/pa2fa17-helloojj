@@ -66,8 +66,18 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITIONS
-
-
+int* MakeDynoIntArray(unsigned int size) {
+  
+}
+int Sum(int* the_array, unsigned int array_size) {
+  
+}
+int Max(int* the_array, unsigned int array_size){
+  
+}
+int Min(int* the_array, unsigned int array_size) {
+  
+}
 // For testing (DO NOT ALTER)
 void UnitTest() {
   cout << string(40, '-') << endl;

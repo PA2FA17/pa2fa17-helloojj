@@ -17,7 +17,7 @@ int main() {
 
 void Sneaky(int *temp) {
     *temp = 99;
-    cout << "In Sneaky, *temp =="  << *temp << endl;
+    cout << "In Sneaky, *temp == "  << *temp << endl;
 }
 
 
