@@ -81,7 +81,7 @@ int Sum(int* the_array, unsigned int array_size) {
   }
   return num;
 }
-int Max(int* the_array, unsigned int array_size){
+int Max(int* the_array, unsigned int array_size) {
     int num = 0;
   if (the_array == NULL) {
     throw "NULL ARRAY REFERENCE";
@@ -94,7 +94,6 @@ int Max(int* the_array, unsigned int array_size){
   return num;
 }
 int Min(int* the_array, unsigned int array_size) {
-
   if (the_array == NULL) {
     throw "NULL ARRAY REFERENCE";
   }
@@ -104,7 +103,7 @@ int Min(int* the_array, unsigned int array_size) {
       num = the_array[i];
     }
   }
-  
+
   return num;
 }
 // For testing (DO NOT ALTER)
