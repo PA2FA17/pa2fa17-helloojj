@@ -49,7 +49,6 @@ int CountWords(string word) {
       count++;
     }
   }
-
   return count;
 }
 

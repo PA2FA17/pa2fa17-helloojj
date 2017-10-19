@@ -126,9 +126,9 @@ void SwapValues(int &value_1, int &value_2) {
     cout << value_1 << " " << value_2 << endl;
   }
   // Code SWAP Algorithm Here
-	value_1 = value_1 ^ value_2;
-	value_2 = value_2 ^ value_1;
-	value_1 = value_1 ^ value_2;
+  value_1 = value_1 ^ value_2;
+  value_2 = value_2 ^ value_1;
+  value_1 = value_1 ^ value_2;
 }
 
 // For testing (DO NOT ALTER)

@@ -86,22 +86,54 @@ int main() {
 // CODE HERE -- FUNCTION DEFINITION
 string* MakeDynoString(string contents) {
   string *s;
-
+  s = new string;
+  *s = contents;
 
   return s;
 }
 void ClearDynoString(string *&the_string) {
-  
+  delete the_string;
+  the_string = NULL;
 }
 unsigned int CountChars(string* theString, unsigned int &alpha,
                         unsigned int &num) {
-                          
+  if (theString == NULL) {
+    throw "NULL STRING REFERENCE";
+  }
+  alpha = 0; num = 0;
+    for (unsigned int i = 0; i < theString->length(); i++) {
+      if (isalpha(theString->at(i))) {
+        alpha++;
+      } else if (isdigit(theString->at(i))) {
+          num++;
+      }
+    }
+  return theString->length();
 }
 bool FindWord(string *the_string, string the_word) {
-  
+  bool hold = false;
+  if (the_string == NULL) {
+    throw "NULL STRING REFERENCE";
+  }
+  size_t found = the_string->find(the_word);
+  if (found != string::npos) {
+    hold = true;
+  }
+return hold;
 }
 bool ReplaceWord(string* the_string, string old_word, string new_word) {
-  
+  bool hold = false;
+  if (the_string == NULL) {
+    throw "NULL STRING REFERENCE";
+  }
+  size_t found = the_string->find(old_word);
+  if (found != string::npos) {
+    old_word = old_word.replace(old_word.begin(), old_word.end(), new_word);
+  }
+  if (found != string::npos && old_word == new_word) {
+    hold = true;
+  }
+  return hold;
 }
 
 
