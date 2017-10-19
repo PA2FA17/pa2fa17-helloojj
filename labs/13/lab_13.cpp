@@ -128,9 +128,10 @@ bool ReplaceWord(string* the_string, string old_word, string new_word) {
   }
   size_t found = the_string->find(old_word);
   if (found != string::npos) {
+    // replace words
     old_word = old_word.replace(old_word.begin(), old_word.end(), new_word);
   }
-  if (found != string::npos && old_word == new_word) {
+  if (old_word == new_word) {
     hold = true;
   }
   return hold;

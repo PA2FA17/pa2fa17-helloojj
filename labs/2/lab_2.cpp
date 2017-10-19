@@ -99,7 +99,7 @@ double LaunchHumanCannonball(double initial_velocity, double launch_angle) {
   double x_distance = 0.0;
   x_distance = x_velocity * flight_time;
 
-  return x_velocity;
+  return x_distance;
 }
 
 // For testing (DO NOT ALTER)
