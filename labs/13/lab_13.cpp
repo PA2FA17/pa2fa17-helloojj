@@ -88,7 +88,6 @@ string* MakeDynoString(string contents) {
   string *s;
   s = new string;
   *s = contents;
-
   return s;
 }
 void ClearDynoString(string *&the_string) {
@@ -122,7 +121,7 @@ bool FindWord(string *the_string, string the_word) {
 return hold;
 }
 bool ReplaceWord(string* the_string, string old_word, string new_word) {
-  bool hold = false;
+  bool replace = false;
   if (the_string == NULL) {
     throw "NULL STRING REFERENCE";
   }
@@ -132,9 +131,9 @@ bool ReplaceWord(string* the_string, string old_word, string new_word) {
     old_word = old_word.replace(old_word.begin(), old_word.end(), new_word);
   }
   if (old_word == new_word) {
-    hold = true;
+    replace = true;
   }
-  return hold;
+  return replace;
 }
 
 

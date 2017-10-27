@@ -1,6 +1,6 @@
 /*
  * Name        : lab_15.cpp
- * Author      : FILL IN
+ * Author      : Justin johnson
  * Description : Working with Insertion and Shell Sort
  */
 #include <iostream>
@@ -61,7 +61,40 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITION
+int InsertionSort(int the_array[], unsigned int size) {
+  int passes = 0;
+  int j;
+  for (unsigned int i = 0; i < size; i++) {
+    j = i;
+    while (j > 0 && (the_array[j] < the_array[j - 1])) {
+      SwapValues(the_array[j], the_array[j - 1]);
+      j--;
+    }
+    passes++;
+  }
+  return passes;
+}
 
+int ShellSort(int the_array[], unsigned int size) {
+  int passes = 0;
+  int gap = size / 2;
+  int j, temp;
+  while (gap > 0) {
+    for (unsigned int i = gap; i < size; i++) {
+      temp = the_array[i];
+      j = i;
+      while (j >= gap && the_array[j - gap] > temp) {
+        the_array[j] = the_array[j - gap];
+        j -= gap;
+      }
+      the_array[j] = temp;
+      DisplayArray(the_array);
+    }
+  passes++;
+  gap /= 2;
+  }
+  return passes;
+}
 
 void SwapValues(int &value_1, int &value_2) {
   // DO NOT ALTER THE NEXT 3 LINES!!!
@@ -69,6 +102,9 @@ void SwapValues(int &value_1, int &value_2) {
     cout << value_1 << " " << value_2 << endl;
   }
   // Code SWAP Algorithm Here
+  int memory_val_2 = value_2;
+  value_2 = value_1;
+  value_1 = memory_val_2;
 }
 
 // For testing (DO NOT ALTER)
