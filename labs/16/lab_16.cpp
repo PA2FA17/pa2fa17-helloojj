@@ -124,7 +124,47 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITIONS
-
+ShoppingList::ShoppingList() {
+  max_items_ = 25;
+  items_ = new string[max_items_];
+  item_count_ = 0;
+}
+ShoppingList::ShoppingList(unsigned int max_items) {
+  max_items_ = max_items;
+  items_ = new string[max_items];
+  item_count_ = 0;
+}
+ShoppingList::~ShoppingList() {
+  delete[] items_;
+}
+unsigned int ShoppingList:: max_items() const {
+  return max_items_;
+}
+unsigned int ShoppingList::item_count() const {
+  return item_count_;
+}
+bool ShoppingList::AddItem(string item) {
+  if (item_count_ == max_items_) {
+    return false;
+  }
+  items_[item_count_++] = item;
+    return true;
+}
+string ShoppingList::GetItem(unsigned int index) const {
+  assert(item_count_ >= index);
+  return items_[index];
+}
+string& ShoppingList::GetItem(unsigned int index) {
+  // assert(item_count_ >= index);
+  return items_[index];
+}
+void ShoppingList::Reset(unsigned int max_items) {
+  assert(max_items > 0);
+  delete[] items_;
+  max_items_ = max_items;
+  items_ = new string[max_items];
+  item_count_ = 0;
+}
 
 // For testing (DO NOT ALTER)
 void UnitTest(int test) {

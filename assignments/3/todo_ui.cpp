@@ -10,7 +10,6 @@ TodoUI::~TodoUI() {
 }
 // quit function works
 void TodoUI::Menu() {
-  cout << "----------\n";
   cout << "[0] QuitProgram\n[1] Add Item\n[2] Remove Item\n[3] View Item\n[4]"
        << "view all Item \n[5]Remove All Items\n";
   int input = -1;
