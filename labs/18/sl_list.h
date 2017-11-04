@@ -25,7 +25,6 @@ class SLList {
  private:
   SLNode* head_;
   unsigned int size_;
-
 };
 
 #endif

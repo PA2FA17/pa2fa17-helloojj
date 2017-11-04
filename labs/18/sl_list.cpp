@@ -1,6 +1,6 @@
 #include "sl_list.h"
 
-SLList::SLList() 
+SLList::SLList()
   : head_(NULL),
     size_(0) {
 }
@@ -24,10 +24,9 @@ void SLList::RemoveHead() {
   }
 }
 void SLList::Clear() {
-  while(head_ != NULL) {
+  while (head_ != NULL) {
     RemoveHead();
   }
-    
 }
 unsigned int SLList::size() const {
     return size_;
