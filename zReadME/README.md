@@ -19,7 +19,7 @@
 + Run the following commands in the terminal:
     * cd ~/workspace
     * git add .
-    * git commit -m'YOUR COMMIT MESSAGE'
+    * git commit -m'Submission'
     * git push origin master (The origin master part may be optional)
 - Your files should now be submitted
 
