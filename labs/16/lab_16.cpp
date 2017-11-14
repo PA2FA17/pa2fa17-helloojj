@@ -26,7 +26,11 @@ class ShoppingList {
   /*
    * Overloaded constructor.
    * Initializes max_items_ to max_items, items_ to size max_items
+<<<<<<< HEAD
    * and item_count to 0.
+=======
+   * and item_count_ to 0.
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
    * @param unsigned int max_items - The desired size of the items_ array
    */
   ShoppingList(unsigned int max_items);
@@ -124,6 +128,7 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITIONS
+<<<<<<< HEAD
 ShoppingList::ShoppingList() {
   max_items_ = 25;
   items_ = new string[max_items_];
@@ -165,6 +170,9 @@ void ShoppingList::Reset(unsigned int max_items) {
   items_ = new string[max_items];
   item_count_ = 0;
 }
+=======
+
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 
 // For testing (DO NOT ALTER)
 void UnitTest(int test) {

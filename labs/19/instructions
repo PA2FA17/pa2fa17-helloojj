@@ -61,4 +61,8 @@ Exercises having the following will lose 10% per category:
 Exercises that DO NOT COMPILE will receive a ZERO!
 
 NOTE: Exercises that compile with warnings will be treated as if they did not
+<<<<<<< HEAD
 compile. (i.e. they will receive a zero)
+=======
+      compile. (i.e. they will receive a zero)
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212

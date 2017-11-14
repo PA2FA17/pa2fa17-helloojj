@@ -1,6 +1,10 @@
 /*
  * Name        : lab_15.cpp
+<<<<<<< HEAD
  * Author      : Justin johnson
+=======
+ * Author      : FILL IN
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
  * Description : Working with Insertion and Shell Sort
  */
 #include <iostream>
@@ -61,6 +65,7 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITION
+<<<<<<< HEAD
 int InsertionSort(int the_array[], unsigned int size) {
   int passes = 0;
   int j;
@@ -95,6 +100,9 @@ int ShellSort(int the_array[], unsigned int size) {
   }
   return passes;
 }
+=======
+
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 
 void SwapValues(int &value_1, int &value_2) {
   // DO NOT ALTER THE NEXT 3 LINES!!!
@@ -102,9 +110,12 @@ void SwapValues(int &value_1, int &value_2) {
     cout << value_1 << " " << value_2 << endl;
   }
   // Code SWAP Algorithm Here
+<<<<<<< HEAD
   int memory_val_2 = value_2;
   value_2 = value_1;
   value_1 = memory_val_2;
+=======
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 }
 
 // For testing (DO NOT ALTER)

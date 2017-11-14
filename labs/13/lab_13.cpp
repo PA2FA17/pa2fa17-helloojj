@@ -1,6 +1,10 @@
 /*
  * Name        : lab_13.cpp
+<<<<<<< HEAD
  * Author      : Justin Johnson
+=======
+ * Author      : FILL IN
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
  * Description : Working with Pointers and Dynamic Objects
  */
 #include <iostream>
@@ -84,6 +88,7 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITION
+<<<<<<< HEAD
 string* MakeDynoString(string contents) {
   string *s;
   s = new string;
@@ -135,6 +140,8 @@ bool ReplaceWord(string* the_string, string old_word, string new_word) {
   }
   return replace;
 }
+=======
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 
 
 // For testing (DO NOT ALTER)

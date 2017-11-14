@@ -1,15 +1,23 @@
 /*
  * Name        : lab_14.cpp
+<<<<<<< HEAD
  * Author      : Justin Johnson
+=======
+ * Author      : FILL IN
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
  * Description : Working with Bubble and Selection Sort
  */
 #include <iostream>
 #include <string>
 using std::cout;
 using std::endl;
+<<<<<<< HEAD
 // #include <algorithm> // std::swap
 using std::string;
 using std::swap;
+=======
+using std::string;
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 
 /*
  * Apply the bubble sort algorithm to sort an array of integers.
@@ -70,6 +78,7 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITION
+<<<<<<< HEAD
 int BubbleSort(int the_array[], unsigned int size) {
   int pass = 0;
 
@@ -120,15 +129,22 @@ int SelectionSort(int the_array[], unsigned int size) {
   }
   return pass;
 }
+=======
+
+
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 void SwapValues(int &value_1, int &value_2) {
   // DO NOT ALTER THE NEXT 3 LINES!!!
   if (GRADER) {
     cout << value_1 << " " << value_2 << endl;
   }
   // Code SWAP Algorithm Here
+<<<<<<< HEAD
   value_1 = value_1 ^ value_2;
   value_2 = value_2 ^ value_1;
   value_1 = value_1 ^ value_2;
+=======
+>>>>>>> 29d6e73ef18b98667f98e3eb268e5eaf7f375212
 }
 
 // For testing (DO NOT ALTER)
