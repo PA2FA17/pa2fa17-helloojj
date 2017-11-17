@@ -16,6 +16,10 @@ class SLList {
   SLList();
   // destructor
   ~SLList();
+  void InsertHead(int num);
+  void InsertTail(int num);
+  void RemoveHead();
+  void RemoveTail();
   // get the first node
   int GetHead() const;
   // get the last node
@@ -32,10 +36,6 @@ class SLList {
   SLNode* tail_;
   unsigned int size_;
   //
-  void InsertHead(int num);
-  void InsertTail(int num);
-  void RemoveHead();
-  void RemoveTail();
 };
 
 #endif
