@@ -8,6 +8,39 @@ SLList::SLList()
 SLList::~SLList() {
   Clear();
 }
+void SLList::Insert(int num) {
+  if (head_ == NULL || num <= head_->contents()) {
+    InsertHead(num);
+  } else if (num >= tail_->contents()) {
+    InsertTail(num);
+  } else {
+    InsertMiddle(num);
+  }
+}
+bool SLList::RemoveFirstOccurence(int num) {
+  if (head_ == NULL) {
+    return false;
+  } else {
+    SLNode* it = head_;
+    SLNode* trail = NULL;
+    while (it != NULL && it->contents() != num) {
+      trail = it;
+      it = it->next_node();
+    }
+    if (it == NULL) {
+      return false;
+    } else if (it == head_) {
+      RemoveHead();
+    } else if (it == tail_) {
+      RemoveTail();
+    } else {
+      trail->set_next_node(it->next_node());
+      delete it;
+      size_--;
+    }
+    return true;
+  }
+}
 void SLList::InsertHead(int num) {
   SLNode* temp = new SLNode;
   temp->set_contents(num);
@@ -31,6 +64,23 @@ void SLList::InsertTail(int num) {
       tail_ = temp;
       size_++;
   }
+}
+void SLList::InsertMiddle(int num) {
+  SLNode* hold = head_;
+  SLNode* trailer = NULL;
+  SLNode* temp = new SLNode;
+  temp->set_next_node(NULL);
+  temp->set_contents(num);
+  while (hold != NULL) {
+    if (hold->contents() >= num) {
+      break;
+    }
+    trailer = hold;
+    hold = hold->next_node();
+  }
+  trailer->set_next_node(temp);
+  temp->set_next_node(hold);
+  size_++;
 }
 int SLList::GetHead() const {
   if (head_ == NULL) {

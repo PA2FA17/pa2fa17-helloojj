@@ -6,30 +6,36 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-using std::cout;
-using std::cin;
+
 using std::stringstream;
-using std::endl;
 using std::string;
 
 class SLList {
  public:
+ // default constructor
   SLList();
+  // destructor
   ~SLList();
-  void InsertHead(int num);
-  void InsertTail(int num);
-  void RemoveHead();
-  void RemoveTail();
+  // get the first node
   int GetHead() const;
+  // get the last node
   int GetTail() const;
+  // used ny the destructor
   void Clear();
+  // get the size of the list
   unsigned int size() const;
+  // out put
   string ToString() const;
 
  private:
   SLNode* head_;
   SLNode* tail_;
   unsigned int size_;
+  //
+  void InsertHead(int num);
+  void InsertTail(int num);
+  void RemoveHead();
+  void RemoveTail();
 };
 
 #endif
