@@ -4,13 +4,15 @@
  * Description : Various functions using templates. Please note you can just
  *               write the definitions in here. No need for prototypes.
  */
- #include <iostream>
+#include <iostream>
+#include <iomanip>
 #include <string>
 #include <sstream>
 using std::string;
 using std::stringstream;
 using std::cout;
 using std::endl;
+
 /*
  * Function Name: PrepareForDisplay
  * Create a string containing the contents of an array, each element separated
@@ -76,14 +78,18 @@ using std::endl;
  */
 template <typename T>
 string PrepareForDisplay(T values[], unsigned int size, char separator = ',') {
-  stringstream ss;  
-  for (unsigned int i = 0; i < size ; i++) {
-    ss << values[i] << separator;
+  stringstream ss; int i = 0;
+
+  while (i < size) {
+    if (i == size - 1) {
+      ss << values[i];
+    } else {
+        ss << std::fixed << std::setprecision(2) << values[i] << separator;
+    }
+    i++;
   }
-  string s = ss.str();
-  s.resize(s.size() - 1);
-  
-  return s;
+
+  return ss.str();
 }
 template <typename T>
 bool HasValue(T values[], unsigned int size, T value_to_find) {
@@ -98,7 +104,7 @@ template <typename T>
 T ValueAt(T values[], unsigned int size, unsigned int index, bool &error) {
   error = true;
   for (unsigned int i = 0; i < size; i++) {
-    if(values[i] == values[index]) {
+    if (values[i] == values[index]) {
       error = false;
     }
   }
@@ -112,7 +118,7 @@ T Sum(T values[], unsigned int size) {
   T sum;
   if (size > 0) {
      sum = values[0];
-    for(unsigned int i = 1; i < size; i++) {
+    for (unsigned int i = 1; i < size; i++) {
       sum = sum + values[i];
     }
   } else {
@@ -121,17 +127,17 @@ T Sum(T values[], unsigned int size) {
   return sum;
 }
 template <typename T>
-bool SwapValues( T values[], unsigned int size, unsigned int index1, 
-              unsigned int index2) {
-  //T temp;
+bool SwapValues (T values[], unsigned int size, unsigned int index1,
+                 unsigned int index2) {
+  // T temp;
   unsigned int i = 0;
   if (index1 >= 0 && index2 >= 0) {
     do {
       // temp = values[index1];
       // values[index1] = values[index2];
       // values[index2] = temp;
-      i++; //size--;
-      //std::cout << i << " Helloo" << std::endl;
+      i++;  // size--;
+      // std::cout << i << " Helloo" << std::endl;
     } while (size > i);
     // if (values[index2] == temp) {
     //   return true;

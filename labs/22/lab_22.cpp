@@ -62,7 +62,8 @@ string ArrayForwardsAsString(int array[], unsigned int start,
  * @return a string containing the contents of the array, separated by spaces, in reverse order; returns empty string
  *         if the startIndex is < zero
  */
-string ArrayBackwardsAsString(int array[], unsigned int start, unsigned int size);
+string ArrayBackwardsAsString(int array[], unsigned int start,
+                              unsigned int size);
 
 // For testing (DO NOT ALTER)
 #include <cctype>
@@ -117,16 +118,16 @@ string ArrayForwardsAsString(int array[], unsigned int start,
   ss << ArrayForwardsAsString(array, start + 1, size);
   return ss.str();
 }
-string ArrayBackwardsAsString(int array[], unsigned int start, 
+string ArrayBackwardsAsString(int array[], unsigned int start,
                               unsigned int size) {
   stringstream ss;
-  if (start < size ) {
+  if (start < size) {
     int temp = array[size];
     array[size] = array[start];
     array[start] = temp;
-    
+
     ss << array[size] << " ";
-    ss << ArrayBackwardsAsString(array, start - 1, size );
+    ss << ArrayBackwardsAsString(array, start - 1, size);
   }
   return ss.str();
 }
