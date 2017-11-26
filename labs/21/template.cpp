@@ -115,25 +115,27 @@ T Sum(T values[], unsigned int size) {
     for(unsigned int i = 1; i < size; i++) {
       sum = sum + values[i];
     }
+  } else {
+    sum = T();
   }
   return sum;
 }
 template <typename T>
 bool SwapValues( T values[], unsigned int size, unsigned int index1, 
               unsigned int index2) {
-  T temp;
-  unsigned int i = size - 1;
+  //T temp;
+  unsigned int i = 0;
   if (index1 >= 0 && index2 >= 0) {
     do {
       // temp = values[index1];
       // values[index1] = values[index2];
       // values[index2] = temp;
       i++; //size--;
-      std::cout << i << " Helloo" << std::endl;
+      //std::cout << i << " Helloo" << std::endl;
     } while (size > i);
-    if (values[index2] == temp) {
-      return true;
-    }
+    // if (values[index2] == temp) {
+    //   return true;
+    // }
   } else if (index1 >= 0 && index2 < 0) {
     values[index1] = values[index1];
   } else if (index2 >= 0 && index1 < 0) {
