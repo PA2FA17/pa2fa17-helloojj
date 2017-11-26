@@ -1,6 +1,6 @@
 /*
  * Name        : lab_22.cpp
- * Author      : YOUR NAME
+ * Author      : Justin Johnson
  * Description : Recursive Functions
  */
 
@@ -83,7 +83,53 @@ int main() {
 }
 
 // CODE FUNCTION DEFINITIONS HERE
-
+unsigned int Factorial(unsigned int value) {
+  if (value == 0) {
+    return 1;
+  } else {
+    value = value * Factorial(value - 1);
+  }
+  return value;
+}
+unsigned int Fibonacci(unsigned int fib_value) {
+  if (fib_value <= 1) {
+    return fib_value;
+  }
+  return Fibonacci(fib_value - 1) + Fibonacci(fib_value - 2);
+}
+bool WordIsPalindrome(string word) {
+  if (word.size() <= 1) {
+    return true;
+  } else {
+      if (word.at(0) != word.at(word.size() - 1))
+        return false;
+      else
+        return true;
+    }
+}
+string ArrayForwardsAsString(int array[], unsigned int start,
+                             unsigned int size) {
+  stringstream ss;
+  if (start >= size) {
+    return "";
+  }
+  ss << array[start] << " ";
+  ss << ArrayForwardsAsString(array, start + 1, size);
+  return ss.str();
+}
+string ArrayBackwardsAsString(int array[], unsigned int start, 
+                              unsigned int size) {
+  stringstream ss;
+  if (start < size ) {
+    int temp = array[size];
+    array[size] = array[start];
+    array[start] = temp;
+    
+    ss << array[size] << " ";
+    ss << ArrayBackwardsAsString(array, start - 1, size );
+  }
+  return ss.str();
+}
 
 // For testing (DO NOT ALTER)
 void UnitTest() {

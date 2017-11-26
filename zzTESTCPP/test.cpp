@@ -1,38 +1,23 @@
-
 #include <iostream>
-#include <cmath>
+#include <strstream>
 #include <string>
-#include <cctype>
-#include <sstream>
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-using std::stringstream;
-//using namespace std;
-//void CountCharacters(word, &letter_count ,&number_count);
-void F( int *point) {
-*point = 10;
-}
+#include <string.h>
 
-int main () {
-int my_var = 5;
-int*p = &my_var;
-F(p);
-cout << *p << endl;
-cout << my_var << endl;
+using namespace std;
 
-  return 0;
+int uhOh (string TroubleInRiverCity)
+{
+    cerr << TroubleInRiverCity << endl;
+    return 1;
 }
- 
-// void CountCharacters(string word, int &letter_count , int &number_count ){
-    
-//     for (int i = 0; i < word.length(); i++) {
-//       if (isalpha(word.at(i))) {
-//       letter_count++;
-//       }
-//       if(isdigit(word.at(i))) {
-//       number_count++;
-//       }
-//     }
-//   }
+int main (int argc, char *argv [])
+{
+    strstream elStreamo;
+    elStreamo << "ABCD" << '\0';
+    cout << elStreamo.str () << endl;
+    int len = strlen (elStreamo.str ());
+    elStreamo.str ()[len-1] = '\0';
+    cout << elStreamo.str () << endl;
+    cin.get ();
+    return 0;
+}
