@@ -120,15 +120,12 @@ string ArrayForwardsAsString(int array[], unsigned int start,
 }
 string ArrayBackwardsAsString(int array[], unsigned int start,
                               unsigned int size) {
-  stringstream ss;
-  if (start < size) {
-    int temp = array[size];
-    array[size] = array[start];
-    array[start] = temp;
-
-    ss << array[size] << " ";
-    ss << ArrayBackwardsAsString(array, start - 1, size);
+  int index = start;
+  if (index < 0) {
+    return "";
   }
+  stringstream ss;
+  ss << array[start] << ' ' <<  ArrayBackwardsAsString(array, start - 1, size);
   return ss.str();
 }
 
