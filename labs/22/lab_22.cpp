@@ -99,14 +99,15 @@ unsigned int Fibonacci(unsigned int fib_value) {
   return Fibonacci(fib_value - 1) + Fibonacci(fib_value - 2);
 }
 bool WordIsPalindrome(string word) {
-  if (word.size() <= 1) {
+  if (word.length() <= 1) {
     return true;
-  } else {
-      if (word.at(0) != word.at(word.size() - 1))
-        return false;
-      else
-        return true;
+  }
+  if (word.at(0) == word.at(word.length() - 1)) {
+    if (WordIsPalindrome(word.substr(1, word.length() - 2))) {
+      return true;
     }
+  }
+  return false;
 }
 string ArrayForwardsAsString(int array[], unsigned int start,
                              unsigned int size) {
