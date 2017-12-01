@@ -15,7 +15,7 @@ public function interface:
 	
 	destructor, calls the Clear function
 	
-	bool Insert(int), calls private function Insert(int, root)
+	bool  (int), calls private function Insert(int, root)
 	
 	void Clear(), call private function Clear(root)
 	
@@ -29,10 +29,10 @@ private function interface:
 								  true; if integer is already in the tree, does not insert,
 								  returns false
 	
-	void Clear (BSTNode*&), Clear the entire contents of the tree, freeing all memory
+void Clear (BSTNode*&), Clear the entire contents of the tree, freeing all memory
 							associated with all nodes
 	
-	string InOrder (BSTNode*), Creates a string of the data in all nodes in the tree,
+string InOrder (BSTNode*), Creates a string of the data in all nodes in the tree,
 							   in ascending order, separate by spaces (there should be a 
 							   space after the last output value)
 

@@ -2,7 +2,7 @@
  * Name        : bst_node.cpp
  * Author      : Justin Johnson
  * Description : .cpp file for bst_node.h
- */
+*/
 
 #include "bst_node.h"
 
@@ -28,13 +28,13 @@ int BSTNode::GetContents() const {
   return contents_;
 }
 int& BSTNode::GetContents() {
- return contents_;
+  return contents_;
 }
 void BSTNode::SetLeftChild(BSTNode* left_child) {
   left_child_ = left_child;
 }
 void BSTNode::SetRightChild(BSTNode* right_child) {
- right_child_ = right_child;
+  right_child_ = right_child;
 }
 BSTNode* BSTNode::GetLeftChild() const {
   return left_child_;

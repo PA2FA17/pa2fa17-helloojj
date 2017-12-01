@@ -78,7 +78,7 @@ using std::endl;
  */
 template <typename T>
 string PrepareForDisplay(T values[], unsigned int size, char separator = ',') {
-  stringstream ss; int i = 0;
+  stringstream ss; unsigned int i = 0;
 
   while (i < size) {
     if (i == size - 1) {

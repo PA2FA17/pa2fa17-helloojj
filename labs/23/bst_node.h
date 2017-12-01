@@ -34,7 +34,7 @@ class BSTNode {
 
   BSTNode* GetRightChild() const;
   BSTNode*& GetRightChild();
-
+  
  private:
   BSTNode* left_child_;
   BSTNode* right_child_;

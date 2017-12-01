@@ -19,14 +19,13 @@ class BSTree {
   void Clear();
   unsigned int GetSize();
   string InOrder();
- 
+
  private:
   BSTNode* root_;
   unsigned int size_;
-  
-  bool Insert(int num, BSTNode*& node);
-  void Clear(BSTNode*& node);
-  string InOrder(BSTNode* node);
-  
+
+  bool Insert(int num, BSTNode*& sub_root);
+  void Clear(BSTNode*& sub_root);
+  string InOrder(BSTNode* sub_root);
 };
 #endif

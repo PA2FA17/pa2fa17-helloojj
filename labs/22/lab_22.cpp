@@ -115,8 +115,7 @@ string ArrayForwardsAsString(int array[], unsigned int start,
   if (start >= size) {
     return "";
   }
-  ss << array[start] << " ";
-  ss << ArrayForwardsAsString(array, start + 1, size);
+  ss << array[start] << " " << ArrayForwardsAsString(array, start + 1, size);
   return ss.str();
 }
 string ArrayBackwardsAsString(int array[], unsigned int start,
