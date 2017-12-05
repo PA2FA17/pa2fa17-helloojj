@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 int main() {
-  int k,i,x;
-  for (i=0; i <= 10; i++) {
+  unsigned int k,i,x;
+  for (i = 0; i <= 10; i++) {
       x = 1;
       for (k = 0; k <= i; k++) {
           cout << x << '\t';

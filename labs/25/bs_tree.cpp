@@ -19,7 +19,7 @@ bool BSTree::Insert(int num) {
 }
 bool BSTree::Remove(int num) {
   if (root_ == NULL) {
-    return root_;
+    return false;
   }
   return Remove(num, root_);
 }
@@ -100,11 +100,23 @@ bool BSTree::Remove(int num, BSTNode*& sub_root) {
           size_--;
           return true;
       } else {
-         int min = FindMin(sub_root->GetRightChild());
-          sub_root->SetContents(min);
-          Remove(min, sub_root->GetRightChild());
-          return true;
+       int min = FindMin(sub_root->GetRightChild());
+        sub_root->SetContents(min);
+        Remove(min, sub_root->GetRightChild());
+        return true;
         }
+      } else if (sub_root->GetContents() < num) {
+          if (sub_root->GetRightChild() != NULL) {
+            Remove(num, sub_root->GetRightChild());
+            return true;
+          }
+          return false;
+      } else if (sub_root->GetContents() > num) {
+          if (sub_root->GetLeftChild() != NULL) {
+            Remove(num, sub_root->GetLeftChild());
+            return true;
+          }
+          return false;
       }
     }
   return false;

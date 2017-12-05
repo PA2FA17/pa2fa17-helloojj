@@ -10,6 +10,8 @@
 #include "dl_list.h"
 #include "dl_node.h"
 #include "dl_node.h"
+#include "dl_node.cpp"
+#include "dl_list.cpp"
 
 #include <iostream>
 #include <sstream>
