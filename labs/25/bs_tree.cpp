@@ -102,21 +102,18 @@ bool BSTree::Remove(int num, BSTNode*& sub_root) {
       } else {
        int min = FindMin(sub_root->GetRightChild());
         sub_root->SetContents(min);
-        Remove(min, sub_root->GetRightChild());
-        return true;
+       return Remove(min, sub_root->GetRightChild());
+        // return true;
         }
       } else if (sub_root->GetContents() < num) {
           if (sub_root->GetRightChild() != NULL) {
-            Remove(num, sub_root->GetRightChild());
-            return true;
+           return Remove(num, sub_root->GetRightChild());
           }
-          return false;
+         // return false;
       } else if (sub_root->GetContents() > num) {
           if (sub_root->GetLeftChild() != NULL) {
-            Remove(num, sub_root->GetLeftChild());
-            return true;
+            return Remove(num, sub_root->GetLeftChild());
           }
-          return false;
       }
     }
   return false;
