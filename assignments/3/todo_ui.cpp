@@ -36,7 +36,7 @@ void TodoUI::Menu() {
       break;
   }
   cout << "[1] Add Item\n[2] Remove Item\n[3] View Item\n[4] view all Items"
-       << "\n[5] Remove All Items\n[6] QuitProgram" << endl;
+       << "\n[5] Remove All Items\n[0] QuitProgram" << endl;
   }
 }
 

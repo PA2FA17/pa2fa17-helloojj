@@ -200,4 +200,3 @@ void Test(bool test, string more_info, string yours, string actual) {
   ut_total++;
   test_number++;
 }
-
