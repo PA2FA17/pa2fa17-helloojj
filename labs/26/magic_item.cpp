@@ -21,7 +21,7 @@ void MagicItem::set_description(string description) {
 }
 
 void MagicItem::set_mana_required(unsigned int mana_required) {
- mana_required_ = mana_required;
+  mana_required_ = mana_required;
 }
 
 string MagicItem::ToString() {
