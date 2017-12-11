@@ -64,14 +64,11 @@ template<typename T>
 Simple<T>::Simple(const T &value) {
   value_ = value;
 }
-
 template<typename T>
 T Simple<T>::value() {
   return value_;
 }
-
 template<typename T>
 void Simple<T>::set_value(const T &value) {
   value_ = value;
 }
-
