@@ -8,7 +8,6 @@
 #include <string>
 #include <sstream>
 #include "bs_treet.h"
-
 using std::cout;
 using std::endl;
 using std::string;
@@ -201,3 +200,4 @@ void Test(bool test, string more_info, string yours, string actual) {
   ut_total++;
   test_number++;
 }
+

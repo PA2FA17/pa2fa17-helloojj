@@ -1,46 +1,32 @@
-#include <iostream>
-using namespace std;
-// int main() {
-//   unsigned int k,i,x;
-//   for (i = 0; i <= 10; i++) {
-//       x = 1;
-//       for (k = 0; k <= i; k++) {
-//           cout << x << '\t';
-//           x = x * (i - k) / (k + 1);
-//       }
-//       cout << endl;
-//   }
-//   return 0;
-// }
-
-if (sub_root == NULL) {
-  return 0;
-} else if (sub_root->GetContents() == num) {
-    if (sub_root->GetContents() == num) {
-      sub_root->DecrementCount();
-      return sub_root->GetCount();
-    }
-  } else if (sub_root->GetLeft() != NULL && sub_root->GetRight() == NULL) {
-      BSTNodeT<T>* temp = sub_root;
-      sub_root = sub_root->GetLeft();
-      delete temp;
-  } else if (sub_root->GetRight() != NULL && sub_root->GetLeft() == NULL) {
-      BSTNodeT<T>* temp = sub_root;
-      sub_root = sub_root->GetRight();
-      delete temp;
-  } else {
-      sub_root = Get(num, sub_root-GetRight());
-      sub_root->GetContents() = num;
-      return Remove(num, sub_root->GetRight());
-  } else if (sub_root->GetContents() < num) {
-      if (sub_root->GetRight() != NULL) {
-        return Remove(num, sub_root->GetRight());
-      }
-    } else if (sub_root->GetContents() > num) {
-        if (sub_root->GetLeft() != NULL) {
-          return Remove(num, sub_root->GetLeft());
-        }
+int BSTreeT<T>::Remove(T contents, BSTNodeT<T>& root) {
+  if (root != NULL) {
+    if (root->GetContents() == contents && root->GetCount() == 1) {
+      size_--;
+      if (root->GetLeft() == NULL && root->GetRight() == NULL) {
+          delete root;
+          root = NULL;
+      } else if (root->GetLeft() == NULL && root->GetRight() != NULL) {
+            BSTNodeT<T> temp = root;
+            root = root->GetRight();
+            delete temp;
+      } else if (root->GetLeft() != NULL && root->GetRight() == NULL) {
+        BSTNodeT<T>* temp = root;
+        root = root->GetLeft();
+        delete temp;
+      } else {
+        T min = FindMin(root->GetRight());
+        root->SetContents(min);
+        Remove(min, root->GetRight());
       }
       return 0;
-      
-  
+    } else if (root->GetCount() > 1) {
+      root->DecrementCount();
+      return root->GetCount();
+    }
+    if (Remove(contents, root->GetLeft()) != -1) {
+      return Remove(contents, root->GetLeft());
+    }
+    return Remove(contents, root->GetRight());
+  }
+  return -1;
+}

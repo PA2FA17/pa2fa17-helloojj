@@ -196,36 +196,46 @@ T BSTreeT<T>::FindMax(BSTNodeT<T>* sub_root) {
 }
 template <typename T>
 int BSTreeT<T>::Remove(T num, BSTNodeT<T>*& sub_root) {
-if (sub_root == NULL) {
-  return 0;
-} else if (sub_root->GetContents() == num) {
+  if (sub_root != NULL) {
     if (sub_root->GetContents() == num) {
-      sub_root->DecrementCount();
-      return sub_root->GetCount();
-    } else if (sub_root->GetLeft() != NULL && sub_root->GetRight() == NULL) {
+      if (sub_root->GetLeft() == NULL &&
+          sub_root->GetRight() == NULL) {
+          delete sub_root;
+          sub_root = NULL;
+          size_--;
+          //return 0;
+     } else if (sub_root->GetLeft()!= NULL &&
+                sub_root->GetRight() == NULL) {
         BSTNodeT<T>* temp = sub_root;
         sub_root = sub_root->GetLeft();
         delete temp;
-    } else if (sub_root->GetRight() != NULL && sub_root->GetLeft() == NULL) {
-        BSTNodeT<T>* temp = sub_root;
-        sub_root = sub_root->GetRight();
-        delete temp;
-    } else {
-        sub_root = Get(num, sub_root->GetRight());
-        sub_root->GetContents() = num;
-        return Remove(num, sub_root->GetRight());
-      } 
-  }
-  else if (sub_root->GetContents() < num) {
-      if (sub_root->GetRight() != NULL) {
-        return Remove(num, sub_root->GetRight());
-      }
-    } else if (sub_root->GetContents() > num) {
-        if (sub_root->GetLeft() != NULL) {
-          return Remove(num, sub_root->GetLeft());
+        size_--;
+       // return 0;
+      } else if (sub_root->GetLeft() == NULL &&
+                sub_root->GetRight() != NULL) {
+          BSTNodeT<T>* temp = sub_root;
+          sub_root = sub_root->GetLeft();
+          delete temp;
+          size_--;
+         // return 0;
+      } else {
+       T min = FindMin(sub_root->GetRight());
+        sub_root->SetContents(min);
+       return Remove(min, sub_root->GetRight());
         }
+        return 0;
+      } else if (sub_root->GetContents() < num) {
+          if (sub_root->GetRight() != NULL) {
+            sub_root->DecrementCount();
+           return Remove(num, sub_root->GetRight());
+          }
+      } else if (sub_root->GetContents() > num) {
+          if (sub_root->GetLeft() != NULL) {
+            return Remove(num, sub_root->GetLeft());
+          }
       }
-  return 0;
+    }
+  return -1;
 }
 
 template <typename T>
